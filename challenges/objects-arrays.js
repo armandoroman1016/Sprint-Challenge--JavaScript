@@ -84,10 +84,11 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = graduates.map((graduate) => graduate.first_name)
-
+const contactInfo = []
+graduates.forEach((graduate) => { 
+  contactInfo.push(`${graduate.first_name} ${graduate.email}`)
+})
 console.log(contactInfo);
-
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = graduates.filter((graduate) => graduate.university.includes('Uni'));
